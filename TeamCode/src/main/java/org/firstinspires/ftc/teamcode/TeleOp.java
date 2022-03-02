@@ -35,25 +35,18 @@ public class TeleOp extends OpMode {
         Vector2d joystick2 = new Vector2d(gamepad1.right_stick_x, -gamepad2.right_stick_y); //RIGHT joystick
 
         robot.driveController.updateUsingJoysticks(checkDeadband(joystick1), checkDeadband(joystick2));
-
-
-//        //uncomment for live tuning of ROT_ADVANTAGE constant
-//        if (gamepad1.b) {
-//            robot.driveController.moduleRight.ROT_ADVANTAGE += 0.01;
-//            robot.driveController.moduleLeft.ROT_ADVANTAGE += 0.01;
-//        }
-//        if (gamepad1.x) {
-//            robot.driveController.moduleRight.ROT_ADVANTAGE -= 0.01;
-//            robot.driveController.moduleLeft.ROT_ADVANTAGE -= 0.01;
-//        }
-//        telemetry.addData("ROT_ADVANTAGE: ", robot.driveController.moduleLeft.ROT_ADVANTAGE);
-
-
-        //to confirm that joysticks are operating properly
-        telemetry.addData("Joystick 1", joystick1);
-        telemetry.addData("Joystick 2", joystick2);
-
+/*
+        if (gamepad1.b) {
+            robot.driveController.moduleRight.ROT_ADVANTAGE += 0.01;
+            robot.driveController.moduleLeft.ROT_ADVANTAGE += 0.01;
+        }
+        if (gamepad1.x) {
+            robot.driveController.moduleRight.ROT_ADVANTAGE -= 0.01;
+            robot.driveController.moduleLeft.ROT_ADVANTAGE -= 0.01;
+        }
+        telemetry.addData("ROT_ADVANTAGE: ", robot.driveController.moduleLeft.ROT_ADVANTAGE);
         telemetry.update();
+ */
     }
 
     //returns zero vector if joystick is within deadband
